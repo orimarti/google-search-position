@@ -11,6 +11,7 @@ You have to create a search engine. More info: https://developers.google.com/cus
 ## Installation
 To install do a clone:
 ```
+git clone https://github.com/orimarti/google-search-position.git
 ```
 Install all the required libraries with carton:
 ```
