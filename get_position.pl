@@ -19,6 +19,7 @@ while ((! $found) && $start < $max){
   foreach my $result (@{$response->{items}}) {
     if (index($result->{link}, $search_params->{web_page}) != -1){
       $found = 1;
+      print $start+$offset;
       exit(0);
     }
     $offset ++;
@@ -26,5 +27,5 @@ while ((! $found) && $start < $max){
   $start = $response->{queries}->{nextPage}->[0]->{startIndex};
   $count = $response->{queries}->{nextPage}->[0]->{count};
 }
-print "200\n";
+print "200";
 exit(1);
