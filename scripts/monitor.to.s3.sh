@@ -28,7 +28,7 @@ if [[ ! -a $LOCK_FILE ]];
 then
   touch -d "$(date -d "25 hours ago" +"%Y-%m-%d %H:%M:%S")" $LOCK_FILE
 fi
-onedaysec="86400"
+onedaysec="86300"
 last_exec=$(ls -l --time-style +%s $LOCK_FILE | awk '{print $6}')
 now=$(date +%s)
 time_difference=$(echo $now-$last_exec|bc)
